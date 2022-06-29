@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="res1"></p>
+    <P>Hello how do u do? I am operating on a live server</P>
+
+    <script>
+        fetch('http://localhost:2000/emp').then(response=>{
+            response.json();
+        }).then(json=>{
+            document.getElementById('res1').value=json
+        }).catch(e=>{
+            console.log(e);
+        })
+        
+         
+     
+      //  document.getElementById("res").innerHTML=b;
+    </script>
+    
+</body>
+</html>
